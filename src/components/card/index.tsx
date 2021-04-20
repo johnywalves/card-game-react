@@ -1,4 +1,6 @@
-import CardProps from '../../types/CardProps'
+import { useMemo } from 'react'
+
+import CardProps, { CardState } from '../../types/CardProps'
 import * as S from './styles'
 
 const Card = ({
@@ -7,10 +9,13 @@ const Card = ({
   level,
   attack,
   defense,
-  reach
+  reach,
+  state
 }: CardProps) => {
+  const deploy = useMemo(() => state === CardState.Deploy, [state])
+
   return (
-    <S.Wrapper>
+    <S.Wrapper deploy={deploy}>
       <S.Values>
         <S.Level aria-label="level">{level}</S.Level>
         <S.CombatValues>
@@ -19,10 +24,12 @@ const Card = ({
           <S.Defense aria-label="defense">{defense}</S.Defense>
         </S.CombatValues>
       </S.Values>
-      <S.Explain>
-        <S.Name aria-label="name">{name}</S.Name>
-        <S.Description aria-label="description">{description}</S.Description>
-      </S.Explain>
+      {!deploy && (
+        <S.Explain>
+          <S.Name aria-label="name">{name}</S.Name>
+          <S.Description aria-label="description">{description}</S.Description>
+        </S.Explain>
+      )}
     </S.Wrapper>
   )
 }

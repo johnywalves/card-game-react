@@ -25,6 +25,9 @@ describe('<Card />', () => {
       <Card {...Database.cards.EmpireUrdin.Soldier} />
     )
 
-    expect(container.firstChild).toHaveStyleRule('background-color', '#ff00dd')
+    expect(container.firstChild).toHaveStyleRule(
+      'background-color',
+      'var(--color-card)'
+    )
   })
 })

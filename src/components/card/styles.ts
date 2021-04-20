@@ -1,19 +1,35 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const LabelValues = styled.p`
   font-size: 2rem;
   font-weight: 700;
 `
 
-export const Wrapper = styled.div`
-  background-color: #ff00dd;
-  border-radius: 1rem;
-  width: 18rem;
-  padding: 1rem;
+type WrapperProps = {
+  deploy?: boolean
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+  background-color: var(--color-card);
+  border-radius: var(--card-padding);
+  width: var(--card-width);
+  ${({ deploy }) =>
+    deploy
+      ? css`
+          height: var(--card-height-deploy);
+        `
+      : css`
+          height: var(--card-height);
+        `};
+  padding: var(--card-padding);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 export const Values = styled.div`
-  height: 9rem;
+  height: 10rem;
 
   display: flex;
   flex-direction: row;
@@ -37,11 +53,13 @@ export const Explain = styled.div`
   background-color: white;
   border-radius: 0.5rem;
   width: 100%;
+  height: 12rem;
   padding: 0.5rem;
 `
 
 export const Name = styled.p`
   width: 100%;
+  height: 3.8rem;
 
   font-size: 1.4rem;
   font-weight: 700;

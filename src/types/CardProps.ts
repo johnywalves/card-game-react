@@ -27,6 +27,7 @@ type CardProps = {
   attack?: number
   defense?: number
   reach?: CardReach
+  state?: CardState
 }
 
 export default CardProps
