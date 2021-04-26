@@ -34,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
       --battlefield-height: 50rem; // card-height * 4 + battlefield-padding * 5 + 1 border
 
       --color-card: #ff00dd;
+      --color-card-holder: #303030;
       --color-battlefield: #f3f3f3;
       --color-separation: #ffffff;
     }
