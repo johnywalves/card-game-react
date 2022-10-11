@@ -1,0 +1,6 @@
+export { Sword } from '@styled-icons/remix-fill/Sword'
+export { ArrowThroughHeartFill as Arrow } from '@styled-icons/bootstrap/ArrowThroughHeartFill'
+export { LocalFireDepartment as Spell } from '@styled-icons/material-outlined/LocalFireDepartment'
+export { Diamond as Artefact } from '@styled-icons/ionicons-solid/Diamond'
+export { ShieldShaded as Shield } from '@styled-icons/bootstrap/ShieldShaded'
+export { CopperCoin as Coin } from '@styled-icons/remix-fill/CopperCoin'

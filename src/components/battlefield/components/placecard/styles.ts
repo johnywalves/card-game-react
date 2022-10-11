@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
-  border: var(--color-separation) 0.1rem solid;
+export const PlacecardWrapper = styled.div`
   height: 100%;
   width: 20%;
-  padding: var(--battlefield-padding);
+  padding-top: calc(var(--card-padding) * 0.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `

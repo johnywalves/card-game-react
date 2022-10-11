@@ -7,26 +7,38 @@ import HandProps from '../../types/HandProps'
 
 const NoCards: CardProps[] = []
 
-const OneCard = [Database.cards.EmpireUrdin.Soldier]
+const OneCard = [Database.collections.EmpireUrdin.Cards.Soldier]
 
-const TwoCards = [...OneCard, Database.cards.EmpireUrdin.Archer]
+const TwoCards = [...OneCard, Database.collections.EmpireUrdin.Cards.Archer]
 
-const ThreeCards = [...TwoCards, Database.cards.EmpireUrdin.FortificationPotion]
+const ThreeCards = [
+  ...TwoCards,
+  Database.collections.EmpireUrdin.Cards.FortificationPotion
+]
 
-const FourCards = [...ThreeCards, Database.cards.EmpireUrdin.Swordsman]
+const FourCards = [
+  ...ThreeCards,
+  Database.collections.EmpireUrdin.Cards.Swordsman
+]
 
-const FiveCards = [...FourCards, Database.cards.EmpireUrdin.InnerFlame]
+const FiveCards = [
+  ...FourCards,
+  Database.collections.EmpireUrdin.Cards.InnerFlame
+]
 
-const SixCards = [...FiveCards, Database.cards.EmpireUrdin.Soldier]
+const SixCards = [...FiveCards, Database.collections.EmpireUrdin.Cards.Soldier]
 
-const SevenCards = [...SixCards, Database.cards.EmpireUrdin.Archer]
+const SevenCards = [...SixCards, Database.collections.EmpireUrdin.Cards.Archer]
 
 const EightCards = [
   ...SevenCards,
-  Database.cards.EmpireUrdin.FortificationPotion
+  Database.collections.EmpireUrdin.Cards.FortificationPotion
 ]
 
-const NineCards = [...EightCards, Database.cards.EmpireUrdin.Swordsman]
+const NineCards = [
+  ...EightCards,
+  Database.collections.EmpireUrdin.Cards.Swordsman
+]
 
 const groupCards = {
   NoCards,

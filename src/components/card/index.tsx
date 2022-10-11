@@ -1,9 +1,21 @@
 import { useMemo } from 'react'
 
-import CardProps, { CardState } from '../../types/CardProps'
-import * as S from './styles'
+import CardProps, { CardState, CardType } from '../../types/CardProps'
+import { Sword, Arrow, Shield, Spell, Artefact, Coin } from '../icons'
+import {
+  CardWrapper,
+  CardValues,
+  CardLevel,
+  CardIcon,
+  CardAttack,
+  CardDefense,
+  CardExplain,
+  CardName,
+  CardDescription
+} from './styles'
 
 const Card = ({
+  type,
   name,
   description,
   level,
@@ -14,23 +26,51 @@ const Card = ({
 }: CardProps) => {
   const deploy = useMemo(() => state === CardState.Deploy, [state])
 
+  const IconCard = () => {
+    if (CardType.Artifact === type) {
+      return <Artefact />
+    }
+
+    if (CardType.Spell === type) {
+      return <Spell />
+    }
+
+    return reach ? <Arrow /> : <Sword />
+  }
+
   return (
-    <S.Wrapper deploy={deploy}>
-      <S.Values>
-        <S.Level aria-label="level">{level}</S.Level>
-        <S.CombatValues>
-          <S.Reach aria-label="reach">{reach}</S.Reach>
-          <S.Attack aria-label="attack">{attack}</S.Attack>
-          <S.Defense aria-label="defense">{defense}</S.Defense>
-        </S.CombatValues>
-      </S.Values>
+    <CardWrapper deploy={deploy}>
+      <CardValues>
+        {!deploy && (
+          <CardLevel aria-label="level">
+            <p>{level}</p> <Coin />
+          </CardLevel>
+        )}
+        {!attack && (
+          <CardIcon aria-label="effect">
+            <IconCard />
+          </CardIcon>
+        )}
+        {attack && (
+          <CardAttack aria-label="attack">
+            <p>{attack}</p> <IconCard />
+          </CardAttack>
+        )}
+        {defense && (
+          <CardDefense aria-label="defense">
+            <p>{defense}</p> <Shield />
+          </CardDefense>
+        )}
+      </CardValues>
       {!deploy && (
-        <S.Explain>
-          <S.Name aria-label="name">{name}</S.Name>
-          <S.Description aria-label="description">{description}</S.Description>
-        </S.Explain>
+        <CardExplain>
+          <CardName aria-label="name">{name}</CardName>
+          <CardDescription aria-label="description">
+            {description}
+          </CardDescription>
+        </CardExplain>
       )}
-    </S.Wrapper>
+    </CardWrapper>
   )
 }
 

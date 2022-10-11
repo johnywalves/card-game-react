@@ -2,141 +2,130 @@ import Database from '../../data'
 import { CardState } from '../../types/CardProps'
 import Card from '../card'
 import Placecard from './components/placecard'
-import * as S from './styles'
+import {
+  BattlefieldWrapper,
+  BattlefieldSeparator,
+  BattlefieldRow
+} from './styles'
 
 const Battlefield = () => {
   return (
-    <S.Wrapper>
-      <S.Row>
+    <BattlefieldWrapper>
+      <BattlefieldRow top>
+        <Placecard></Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Archer}
+            {...Database.collections.EmpireUrdin.Cards.Archer}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Archer}
+            {...Database.collections.EmpireUrdin.Cards.Archer}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Archer}
+            {...Database.collections.EmpireUrdin.Cards.Archer}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Archer}
+            {...Database.collections.EmpireUrdin.Cards.Archer}
+            state={CardState.Deploy}
+          />
+        </Placecard>
+      </BattlefieldRow>
+      <BattlefieldRow>
+        <Placecard>
+          <Card
+            {...Database.collections.EmpireUrdin.Cards.Soldier}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Archer}
+            {...Database.collections.EmpireUrdin.Cards.FortificationPotion}
             state={CardState.Deploy}
           />
         </Placecard>
-      </S.Row>
-      <S.Row>
+        <Placecard></Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Soldier}
-            state={CardState.Deploy}
-          />
-        </Placecard>
-        <Placecard>
-          <Card
-            {...Database.cards.EmpireUrdin.FortificationPotion}
+            {...Database.collections.EmpireUrdin.Cards.Soldier}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Swordsman}
+            {...Database.collections.EmpireUrdin.Cards.Soldier}
+            state={CardState.Deploy}
+          />
+        </Placecard>
+      </BattlefieldRow>
+      <BattlefieldSeparator />
+      <BattlefieldRow top>
+        <Placecard>
+          <Card
+            {...Database.collections.EmpireUrdin.Cards.Soldier}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Soldier}
+            {...Database.collections.EmpireUrdin.Cards.Soldier}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Soldier}
-            state={CardState.Deploy}
-          />
-        </Placecard>
-      </S.Row>
-      <S.Row aria-label="separator" separator />
-      <S.Row>
-        <Placecard>
-          <Card
-            {...Database.cards.EmpireUrdin.Soldier}
+            {...Database.collections.EmpireUrdin.Cards.Swordsman}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Soldier}
+            {...Database.collections.EmpireUrdin.Cards.Soldier}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Swordsman}
+            {...Database.collections.EmpireUrdin.Cards.FortificationPotion}
+            state={CardState.Deploy}
+          />
+        </Placecard>
+      </BattlefieldRow>
+      <BattlefieldRow>
+        <Placecard>
+          <Card
+            {...Database.collections.EmpireUrdin.Cards.Archer}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Soldier}
+            {...Database.collections.EmpireUrdin.Cards.Archer}
             state={CardState.Deploy}
           />
         </Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.FortificationPotion}
+            {...Database.collections.EmpireUrdin.Cards.Archer}
             state={CardState.Deploy}
           />
         </Placecard>
-      </S.Row>
-      <S.Row>
+        <Placecard></Placecard>
         <Placecard>
           <Card
-            {...Database.cards.EmpireUrdin.Archer}
+            {...Database.collections.EmpireUrdin.Cards.Archer}
             state={CardState.Deploy}
           />
         </Placecard>
-        <Placecard>
-          <Card
-            {...Database.cards.EmpireUrdin.Archer}
-            state={CardState.Deploy}
-          />
-        </Placecard>
-        <Placecard>
-          <Card
-            {...Database.cards.EmpireUrdin.Archer}
-            state={CardState.Deploy}
-          />
-        </Placecard>
-        <Placecard>
-          <Card
-            {...Database.cards.EmpireUrdin.Archer}
-            state={CardState.Deploy}
-          />
-        </Placecard>
-        <Placecard>
-          <Card
-            {...Database.cards.EmpireUrdin.Archer}
-            state={CardState.Deploy}
-          />
-        </Placecard>
-      </S.Row>
-    </S.Wrapper>
+      </BattlefieldRow>
+    </BattlefieldWrapper>
   )
 }
 

@@ -24,14 +24,18 @@ export default {
 
 const Template: Story<CardProps> = (args) => <Card {...args} />
 
-export const Criatura = Template.bind({})
+export const CreatureShortReach = Template.bind({})
 
-Criatura.args = Database.cards.EmpireUrdin.Soldier
+CreatureShortReach.args = Database.collections.EmpireUrdin.Cards.Soldier
 
-export const Artefato = Template.bind({})
+export const CreatureLongReach = Template.bind({})
 
-Artefato.args = Database.cards.EmpireUrdin.FortificationPotion
+CreatureLongReach.args = Database.collections.EmpireUrdin.Cards.Archer
 
-export const Feitico = Template.bind({})
+export const Artefact = Template.bind({})
 
-Feitico.args = Database.cards.EmpireUrdin.InnerFlame
+Artefact.args = Database.collections.EmpireUrdin.Cards.FortificationPotion
+
+export const Spell = Template.bind({})
+
+Spell.args = Database.collections.EmpireUrdin.Cards.InnerFlame

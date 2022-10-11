@@ -10,6 +10,12 @@ const GlobalStyles = createGlobalStyle`
       box-sizing: border-box;
     }
 
+    html,
+    body,
+    #__next { 
+      min-height: 100vh;
+    }
+
     html {
       font-size: 62.5%;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -25,18 +31,27 @@ const GlobalStyles = createGlobalStyle`
 
     :root {
       --card-padding: 1rem;
-      --card-width: 18rem;
-      --card-height: 24rem;
-      --card-height-deploy: 10rem;
+      --card-width: 20.25rem;
+      --card-height: 27rem;
+      --card-height-deploy: 8rem;
 
-      --battlefield-padding: 1rem;
-      --battlefield-width: 101rem; // card-width * 5 + battlefield-padding * 5 + 1 border 
-      --battlefield-height: 50rem; // card-height * 4 + battlefield-padding * 5 + 1 border
+      --hero-width: 20rem;
+      --hero-height: 20rem;
 
-      --color-card: #ff00dd;
-      --color-card-holder: #303030;
-      --color-battlefield: #f3f3f3;
+      --battlefield-padding: 0.75rem;
+      --battlefield-width: calc(var(--card-width) * 5 + var(--battlefield-padding) * 5 + 1rem);
+      --battlefield-height: calc(var(--card-height-deploy) * 4 + var(--battlefield-padding) * 5 + 1rem); 
+
+      --color-card: #eee;
+      --color-card-holder: #ccc;
+      --color-battlefield: #282828;
       --color-separation: #ffffff;
+      --color-text: #333;
+      --color-description: #282828;
+    }
+
+    body {
+      color: var(--color-text);
     }
 `
 

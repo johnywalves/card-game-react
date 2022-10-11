@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 
-import * as S from './styles'
+import { PlacecardWrapper } from './styles'
 
-type PlacecardProps = { children: ReactNode }
+type PlacecardProps = { children?: ReactNode }
 
 const Placecard = ({ children }: PlacecardProps) => {
-  return <S.Wrapper>{children}</S.Wrapper>
+  return <PlacecardWrapper>{children}</PlacecardWrapper>
 }
 
 export default Placecard

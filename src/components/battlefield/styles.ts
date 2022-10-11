@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div`
-  background-color: var(--color-battlefield);
+export const BattlefieldWrapper = styled.div`
   width: var(--battlefield-width);
   height: var(--battlefield-height);
 
@@ -10,19 +9,28 @@ export const Wrapper = styled.div`
 `
 
 type RowProps = {
-  separator?: boolean
+  top?: boolean
 }
 
-export const Row = styled.div<RowProps>`
-  height: 25%;
+export const BattlefieldSeparator = styled.div<RowProps>`
+  background-color: var(--color-separation);
+  height: var(--battlefield-padding);
+`
+
+const borderTop = css`
+  border-radius: var(--card-padding) var(--card-padding) 0 0;
+`
+
+const borderBottom = css`
+  border-radius: 0 0 var(--card-padding) var(--card-padding);
+`
+
+export const BattlefieldRow = styled.div<RowProps>`
+  background-color: var(--color-battlefield);
+  height: calc((100% - var(--battlefield-padding)) / 4);
   width: 100%;
   display: flex;
   flex-direction: row;
 
-  ${({ separator }) =>
-    Boolean(separator) &&
-    css`
-      background-color: var(--color-separation);
-      height: var(--battlefield-padding);
-    `}
+  ${({ top }) => (top ? borderTop : borderBottom)}
 `

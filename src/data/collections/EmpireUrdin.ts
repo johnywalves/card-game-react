@@ -1,4 +1,5 @@
 import CardProps, { CardType, CardReach } from '../../types/CardProps'
+import HeroProps from '../../types/HeroProps'
 
 const Soldier: CardProps = {
   type: CardType.Creature,
@@ -44,4 +45,21 @@ const InnerFlame: CardProps = {
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 }
 
-export default { Soldier, Swordsman, Archer, FortificationPotion, InnerFlame }
+const King: HeroProps = {
+  initialHitPoints: 5,
+  defense: 1,
+  name: 'Rei',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+}
+
+const Warlock: HeroProps = {
+  initialHitPoints: 3,
+  defense: 3,
+  name: 'Feiticeiro',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+}
+
+export default {
+  Heroes: { King, Warlock },
+  Cards: { Soldier, Swordsman, Archer, FortificationPotion, InnerFlame }
+}

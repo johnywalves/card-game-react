@@ -1,3 +1,3 @@
-import cards from './cards'
+import collections from './collections'
 
-export default { cards }
+export default { collections }

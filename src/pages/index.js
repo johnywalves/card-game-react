@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <div>
-      <p>Teste</p>
-    </div>
-  )
-}
+import HomView from '../view/home'
+
+const Home = () => <HomView />
+
+export default Home
