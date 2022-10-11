@@ -1,0 +1,40 @@
+{
+  "collections": {
+    "empireurdin": {
+      "name": "collections.empireurdin.name",
+      "description": "collections.empireurdin.description",
+      "commanders": {
+        "emperor": {
+          "name": "collections.empireurdin.commanders.emperor.name",
+          "description": "collections.empireurdin.commanders.emperor.description"
+        },
+        "warlock": {
+          "name": "collections.empireurdin.commanders.warlock.name",
+          "description": "collections.empireurdin.commanders.warlock.description"
+        }
+      },
+      "cards": {
+        "soldier": {
+          "name": "collections.empireurdin.cards.soldier.name",
+          "description": "collections.empireurdin.cards.soldier.description"
+        },
+        "swordsman": {
+          "name": "collections.empireurdin.cards.swordsman.name",
+          "description": "collections.empireurdin.cards.swordsman.description"
+        },
+        "archer": {
+          "name": "collections.empireurdin.cards.archer.name",
+          "description": "collections.empireurdin.cards.archer.description"
+        },
+        "fortificationPotion": {
+          "name": "collections.empireurdin.cards.fortificationPotion.name",
+          "description": "collections.empireurdin.cards.fortificationPotion.description"
+        },
+        "innerFlame": {
+          "name": "collections.empireurdin.cards.innerFlame.name",
+          "description": "collections.empireurdin.cards.innerFlame.description"
+        }
+      }
+    }
+  }
+}

@@ -4,12 +4,11 @@ import normalizeNumber from '../../functions/normalizeNumber'
 
 export const HandWrapper = styled.div`
   width: 100%;
-  height: var(--card-height);
-  overflow: hidden;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 `
 
 type CardHolderProps = {
@@ -21,12 +20,12 @@ const getTransform = (size: number, index: number, hover: boolean) => {
   if (size < 5) {
     return css`
       margin: 0 0.25rem;
-      transform: translateY(${hover ? 0 : 30}%);
+      transform: translateY(${hover ? -35 : 0}%);
     `
   }
 
   return css`
-    transform: translateY(${hover ? 0 : 30}%)
+    transform: translateY(${hover ? -35 : 0}%)
       translateX(${normalizeNumber(size, index) * -25}%);
   `
 }

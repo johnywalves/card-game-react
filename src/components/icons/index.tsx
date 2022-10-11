@@ -4,3 +4,4 @@ export { LocalFireDepartment as Spell } from '@styled-icons/material-outlined/Lo
 export { Diamond as Artefact } from '@styled-icons/ionicons-solid/Diamond'
 export { ShieldShaded as Shield } from '@styled-icons/bootstrap/ShieldShaded'
 export { CopperCoin as Coin } from '@styled-icons/remix-fill/CopperCoin'
+export { PlusMedical as Life } from '@styled-icons/boxicons-regular/PlusMedical'

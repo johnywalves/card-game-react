@@ -4,19 +4,20 @@ type WrapperProps = {
   deploy?: boolean
 }
 
+const cardDeployed = css`
+  height: var(--card-height-deploy);
+`
+
+const cardHandle = css`
+  height: var(--card-height);
+`
+
 export const CardWrapper = styled.div<WrapperProps>`
   border: 0.25rem solid var(--color-card-holder);
   background-color: var(--color-card);
   border-radius: var(--card-padding);
   width: var(--card-width);
-  ${({ deploy }) =>
-    deploy
-      ? css`
-          height: var(--card-height-deploy);
-        `
-      : css`
-          height: var(--card-height);
-        `};
+  ${({ deploy }) => (deploy ? cardDeployed : cardHandle)};
   padding: var(--card-padding);
 
   display: flex;
@@ -74,7 +75,7 @@ export const CardExplain = styled.div`
   border-radius: calc(var(--card-padding) * 0.75);
   width: 100%;
   height: calc(
-    var(--card-height) - var(--card-height-deploy) - var(--card-padding)
+    var(--card-height) - var(--card-height-deploy) * 1.75 - var(--card-padding)
   );
   padding: 0.5rem;
 `

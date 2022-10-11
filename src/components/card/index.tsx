@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { useIntl } from 'react-intl'
 
 import CardProps, { CardState, CardType } from '../../types/CardProps'
 import { Sword, Arrow, Shield, Spell, Artefact, Coin } from '../icons'
@@ -24,6 +25,15 @@ const Card = ({
   reach,
   state
 }: CardProps) => {
+  const intl = useIntl()
+
+  const nameIntl = intl.formatMessage({
+    id: name
+  })
+  const descriptionIntl = intl.formatMessage({
+    id: description
+  })
+
   const deploy = useMemo(() => state === CardState.Deploy, [state])
 
   const IconCard = () => {
@@ -56,7 +66,7 @@ const Card = ({
             <p>{attack}</p> <IconCard />
           </CardAttack>
         )}
-        {defense && (
+        {(defense || defense === 0) && (
           <CardDefense aria-label="defense">
             <p>{defense}</p> <Shield />
           </CardDefense>
@@ -64,9 +74,9 @@ const Card = ({
       </CardValues>
       {!deploy && (
         <CardExplain>
-          <CardName aria-label="name">{name}</CardName>
+          <CardName aria-label="name">{nameIntl}</CardName>
           <CardDescription aria-label="description">
-            {description}
+            {descriptionIntl}
           </CardDescription>
         </CardExplain>
       )}

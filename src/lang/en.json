@@ -1,0 +1,18 @@
+{
+  "collections.empireurdin.name": "Urdin Empire",
+  "collections.empireurdin.description": "Located south of the Wolt continent, founded by Urdin I by a military alliance to ensure protection from constant pirate attacks, after earning the loyalty of his subordinates, deposed the local kings taking over their crowns and their lands",
+  "collections.empireurdin.commanders.emperor.name": "Emperador Urdin VI",
+  "collections.empireurdin.commanders.emperor.description": "Nephew of Emperor Urdin V, assumed by acclamation at the funeral his uncle",
+  "collections.empireurdin.commanders.warlock.name": "Warlock Riko",
+  "collections.empireurdin.commanders.warlock.description": "Emperor's advisor and one of the few who hold his trust",
+  "collections.empireurdin.cards.soldier.name": "Keeper of the Ports",
+  "collections.empireurdin.cards.soldier.description": "Wall of warriors to intercept pirates as they descend from their ships",
+  "collections.empireurdin.cards.swordsman.name": "Swordman of the Sea",
+  "collections.empireurdin.cards.swordsman.description": "Trained for assaults on the high seas, they wear light armor to dive",
+  "collections.empireurdin.cards.archer.name": "Harbor Archers",
+  "collections.empireurdin.cards.archer.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "collections.empireurdin.cards.fortificationPotion.name": "Fortification Potion",
+  "collections.empireurdin.cards.fortificationPotion.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "collections.empireurdin.cards.innerFlame.name": "Inner Flame",
+  "collections.empireurdin.cards.innerFlame.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}

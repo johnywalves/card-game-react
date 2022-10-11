@@ -1,0 +1,18 @@
+{
+  "collections.empireurdin.name": "Império Urdin",
+  "collections.empireurdin.description": "Localizado ao sul do continente Wolt, fundada pelo Urdin I por uma aliança militar para garantir proteção com os constantes ataques piratas, após conquistar a lealdade de seus comandados, depôs os reis locais assumindo suas coroas e suas terras",
+  "collections.empireurdin.commanders.emperor.name": "Imperador Urdin VI",
+  "collections.empireurdin.commanders.emperor.description": "Sobrinho do imperador Urdin V, assumiu por aclamação no enterro seu tio",
+  "collections.empireurdin.commanders.warlock.name": "Feiticeiro Riko",
+  "collections.empireurdin.commanders.warlock.description": "Conselheiro do imperador e um dos poucos que possuem sua confiança",
+  "collections.empireurdin.cards.soldier.name": "Guardião dos Portos",
+  "collections.empireurdin.cards.soldier.description": "Muralha de guerreiros para interceptar piratas ao descem de seus navios",
+  "collections.empireurdin.cards.swordsman.name": "Espadachim dos Mares",
+  "collections.empireurdin.cards.swordsman.description": "Treinados para assaltos em alto mar, usam armadura leve para mergulharem",
+  "collections.empireurdin.cards.archer.name": "Arqueiros dos Portos",
+  "collections.empireurdin.cards.archer.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "collections.empireurdin.cards.fortificationPotion.name": "Poção de Fortificação",
+  "collections.empireurdin.cards.fortificationPotion.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "collections.empireurdin.cards.innerFlame.name": "Chama interior",
+  "collections.empireurdin.cards.innerFlame.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}

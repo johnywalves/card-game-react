@@ -1,8 +1,9 @@
-type HeroProps = {
+type CommanderProps = {
   initialHitPoints: number
   defense: number
   name: string
   description: string
+  deploy?: boolean
 }
 
-export default HeroProps
+export default CommanderProps

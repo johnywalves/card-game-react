@@ -5,7 +5,7 @@ import Database from '../../data'
 
 describe('<Hero />', () => {
   it('should render labels', () => {
-    render(<Hero {...Database.collections.EmpireUrdin.Heroes.King} />)
+    render(<Hero {...Database.collections.EmpireUrdin.Commanders.Emperor} />)
 
     expect(screen.getByLabelText('hitpoint')).toBeInTheDocument()
 
@@ -18,7 +18,7 @@ describe('<Hero />', () => {
 
   it('should render the colors correctly', () => {
     const { container } = render(
-      <Hero {...Database.collections.EmpireUrdin.Heroes.King} />
+      <Hero {...Database.collections.EmpireUrdin.Commanders.Emperor} />
     )
 
     expect(container.firstChild).toHaveStyleRule(

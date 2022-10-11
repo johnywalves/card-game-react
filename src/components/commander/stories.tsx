@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 
 import Hero from '.'
 import Database from '../../data'
-import HeroProps from '../../types/HeroProps'
+import HeroProps from '../../types/CommanderProps'
 
 export default {
   title: 'Hero',
@@ -15,10 +15,10 @@ export default {
 
 const Template: Story<HeroProps> = (args) => <Hero {...args} />
 
-export const King = Template.bind({})
+export const Emperor = Template.bind({})
 
-King.args = Database.collections.EmpireUrdin.Heroes.King
+Emperor.args = Database.collections.EmpireUrdin.Commanders.Emperor
 
 export const Warlock = Template.bind({})
 
-Warlock.args = Database.collections.EmpireUrdin.Heroes.Warlock
+Warlock.args = Database.collections.EmpireUrdin.Commanders.Warlock

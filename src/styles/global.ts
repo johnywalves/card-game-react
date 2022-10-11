@@ -35,8 +35,8 @@ const GlobalStyles = createGlobalStyle`
       --card-height: 27rem;
       --card-height-deploy: 8rem;
 
-      --hero-width: 20rem;
-      --hero-height: 20rem;
+      --commander-width: 30rem;
+      --commander-height: 20rem;
 
       --battlefield-padding: 0.75rem;
       --battlefield-width: calc(var(--card-width) * 5 + var(--battlefield-padding) * 5 + 1rem);
@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
 
       --color-card: #eee;
       --color-card-holder: #ccc;
-      --color-battlefield: #282828;
+      --color-battlefield: #585858;
       --color-separation: #ffffff;
       --color-text: #333;
       --color-description: #282828;
