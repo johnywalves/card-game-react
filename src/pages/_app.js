@@ -1,24 +1,29 @@
+import React, { useMemo } from 'react'
 import { IntlProvider } from 'react-intl'
 
 import { useRouter } from 'next/router'
 
 import en from '../lang/en.json'
-import ptBr from '../lang/pt-br.json'
+import brazilian from '../lang/pt-br.json'
 import GlobalStyles from '../styles/global'
 
-const messages = {
+const dict = {
   en,
-  'pt-br': ptBr
+  'pt-br': brazilian
 }
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   const { locale } = useRouter()
 
+  const messages = useMemo(() => dict[locale], [locale])
+
   return (
-    <IntlProvider locale={locale} messages={messages[locale]}>
+    <>
       <GlobalStyles />
-      <Component {...pageProps} />
-    </IntlProvider>
+      <IntlProvider locale={locale} messages={messages}>
+        <Component {...pageProps} />
+      </IntlProvider>
+    </>
   )
 }
 

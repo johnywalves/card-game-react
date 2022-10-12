@@ -1,11 +1,16 @@
-import { render, screen } from '@testing-library/react'
-
 import Battlefield from '.'
+import Database from '../../data'
+import { render, screen } from '../../test-utils'
 
 describe('<Battlefield />', () => {
-  it('should render labels', () => {
-    render(<Battlefield />)
+  it('should render Battlefield', () => {
+    render(
+      <Battlefield
+        enemy={{ ...Database.collections.EmpireUrdin.Commanders.Emperor }}
+        commander={{ ...Database.collections.EmpireUrdin.Commanders.Warlock }}
+      />
+    )
 
-    expect(screen.getByLabelText('separator')).toBeInTheDocument()
+    expect(screen.getByLabelText('battlefield-row')).toBeInTheDocument()
   })
 })

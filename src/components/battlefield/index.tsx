@@ -15,7 +15,7 @@ const Battlefield = ({ enemy, commander }: BattlefieldProps) => {
     <BattlefieldWrapper>
       <BattlefieldSide>
         <BattlefieldCards>
-          <BattlefieldRow top>
+          <BattlefieldRow top aria-label="battlefield-row">
             <div></div>
             <div>
               <Card

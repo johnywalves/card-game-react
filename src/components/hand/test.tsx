@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react'
-
 import Hand from '.'
 import Database from '../../data'
+import { render, screen } from '../../test-utils'
 
 describe('<Hand />', () => {
   it('should render labels', () => {

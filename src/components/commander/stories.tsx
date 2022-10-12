@@ -1,19 +1,19 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import Hero from '.'
+import Commander from '.'
 import Database from '../../data'
-import HeroProps from '../../types/CommanderProps'
+import CommanderProps from '../../types/CommanderProps'
 
 export default {
-  title: 'Hero',
-  component: Hero,
+  title: 'Commander',
+  component: Commander,
   argTypes: {
     initialHitPoints: { control: { type: 'number', min: 0, max: 20, step: 1 } },
     defense: { control: { type: 'number', min: 0, max: 10, step: 1 } }
   }
 } as Meta
 
-const Template: Story<HeroProps> = (args) => <Hero {...args} />
+const Template: Story<CommanderProps> = (args) => <Commander {...args} />
 
 export const Emperor = Template.bind({})
 

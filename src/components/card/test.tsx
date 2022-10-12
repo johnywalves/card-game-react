@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react'
-
 import Card from '.'
 import Database from '../../data'
+import { render, screen } from '../../test-utils'
 
 describe('<Card />', () => {
   it('should render labels (Soldier)', () => {
