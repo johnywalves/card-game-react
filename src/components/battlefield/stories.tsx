@@ -14,6 +14,38 @@ const Template: Story<BattlefieldProps> = (args) => <Battlefield {...args} />
 export const Standard = Template.bind({})
 
 Standard.args = {
-  enemy: { ...Database.collections.EmpireUrdin.Commanders.Emperor },
-  commander: { ...Database.collections.EmpireUrdin.Commanders.Warlock }
+  enemyCommander: { ...Database.collections.EmpireUrdin.Commanders.Emperor },
+  enemyArmy: [
+    [
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne }
+    ],
+    [
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne }
+    ]
+  ],
+  myCommander: { ...Database.collections.EmpireUrdin.Commanders.Warlock },
+  myArmy: [
+    [
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne }
+    ],
+    [
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne },
+      { ...Database.collections.Config.NoOne }
+    ]
+  ]
 }

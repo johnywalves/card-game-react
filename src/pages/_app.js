@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react'
 import { IntlProvider } from 'react-intl'
+import { Provider } from 'react-redux'
 
 import { useRouter } from 'next/router'
 
 import en from '../lang/en.json'
 import brazilian from '../lang/pt-br.json'
+import store from '../store'
 import GlobalStyles from '../styles/global'
 
 const dict = {
@@ -21,7 +23,9 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <GlobalStyles />
       <IntlProvider locale={locale} messages={messages}>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </IntlProvider>
     </>
   )

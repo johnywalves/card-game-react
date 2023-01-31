@@ -1,33 +1,57 @@
+import { useSelector } from 'react-redux'
+
 import Battlefield from '../../components/battlefield'
 import CommandPoints from '../../components/commandPoints'
 import Deck from '../../components/deck'
 import Enemy from '../../components/enemy'
 import Graveyard from '../../components/graveyard'
 import Hand from '../../components/hand'
-import Database from '../../data'
+import StateProps from '../../types/StateProps'
+
 import { HomeWrapper, HomeRow, HomeDeck } from './styles'
 
 const HomeView = () => {
+  // Enemy state
+  const enemyCommander = useSelector(
+    (state: StateProps) => state.battlefield.enemyCommander
+  )
+  const enemyArmy = useSelector(
+    (state: StateProps) => state.battlefield.enemyArmy
+  )
+  const enemyPoints = useSelector(
+    (state: StateProps) => state.battlefield.enemyPoints
+  )
+  const enemyNumberCards = useSelector(
+    (state: StateProps) => state.battlefield.enemyNumberCards
+  )
+
+  // My state
+  const myCommander = useSelector(
+    (state: StateProps) => state.battlefield.myCommander
+  )
+  const myArmy = useSelector((state: StateProps) => state.battlefield.myArmy)
+  const myPoints = useSelector(
+    (state: StateProps) => state.battlefield.myPoints
+  )
+  const listCards = useSelector(
+    (state: StateProps) => state.battlefield.listCards
+  )
+
   return (
     <HomeWrapper>
-      <Enemy numberCards={6} />
+      <Enemy numberCards={enemyNumberCards} />
+      {enemyPoints}
       <Battlefield
-        enemy={{ ...Database.collections.EmpireUrdin.Commanders.Warlock }}
-        commander={{ ...Database.collections.EmpireUrdin.Commanders.Emperor }}
+        enemyCommander={enemyCommander}
+        enemyArmy={enemyArmy}
+        myCommander={myCommander}
+        myArmy={myArmy}
       />
       <HomeRow>
         <Graveyard />
-        <Hand
-          listCards={[
-            Database.collections.EmpireUrdin.Cards.Soldier,
-            Database.collections.EmpireUrdin.Cards.Swordsman,
-            Database.collections.EmpireUrdin.Cards.Archer,
-            Database.collections.EmpireUrdin.Cards.InnerFlame,
-            Database.collections.EmpireUrdin.Cards.FortificationPotion
-          ]}
-        />
+        <Hand listCards={listCards} />
         <HomeDeck>
-          <CommandPoints points={2} />
+          <CommandPoints points={myPoints} />
           <Deck />
         </HomeDeck>
       </HomeRow>

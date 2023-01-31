@@ -1,8 +1,7 @@
 import Commander from '../../components/commander'
-import Database from '../../data'
 import BattlefieldProps from '../../types/BattlefieldProps'
-import { CardState } from '../../types/CardProps'
-import Card from '../card'
+
+import CardInPosition from './CardInPosition'
 import {
   BattlefieldWrapper,
   BattlefieldSide,
@@ -10,132 +9,52 @@ import {
   BattlefieldRow
 } from './styles'
 
-const Battlefield = ({ enemy, commander }: BattlefieldProps) => {
+const Battlefield = ({
+  enemyCommander,
+  enemyArmy,
+  myCommander,
+  myArmy
+}: BattlefieldProps) => {
   return (
     <BattlefieldWrapper>
       <BattlefieldSide>
         <BattlefieldCards>
           <BattlefieldRow top aria-label="battlefield-row">
-            <div></div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
+            <CardInPosition x={1} y={1} deck={enemyArmy} />
+            <CardInPosition x={1} y={2} deck={enemyArmy} />
+            <CardInPosition x={1} y={3} deck={enemyArmy} />
+            <CardInPosition x={1} y={4} deck={enemyArmy} />
+            <CardInPosition x={1} y={5} deck={enemyArmy} />
           </BattlefieldRow>
           <BattlefieldRow>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Soldier}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.FortificationPotion}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div></div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Soldier}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Soldier}
-                state={CardState.Deploy}
-              />
-            </div>
+            <CardInPosition x={0} y={1} deck={enemyArmy} />
+            <CardInPosition x={0} y={2} deck={enemyArmy} />
+            <CardInPosition x={0} y={3} deck={enemyArmy} />
+            <CardInPosition x={0} y={4} deck={enemyArmy} />
+            <CardInPosition x={0} y={5} deck={enemyArmy} />
           </BattlefieldRow>
         </BattlefieldCards>
-        <Commander {...enemy} deploy />
+        <Commander {...enemyCommander} deploy />
       </BattlefieldSide>
 
       <BattlefieldSide>
         <BattlefieldCards>
           <BattlefieldRow top>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Soldier}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Soldier}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Swordsman}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Soldier}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.FortificationPotion}
-                state={CardState.Deploy}
-              />
-            </div>
+            <CardInPosition x={0} y={1} deck={myArmy} />
+            <CardInPosition x={0} y={2} deck={myArmy} />
+            <CardInPosition x={0} y={3} deck={myArmy} />
+            <CardInPosition x={0} y={4} deck={myArmy} />
+            <CardInPosition x={0} y={5} deck={myArmy} />
           </BattlefieldRow>
           <BattlefieldRow>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
-            <div></div>
-            <div>
-              <Card
-                {...Database.collections.EmpireUrdin.Cards.Archer}
-                state={CardState.Deploy}
-              />
-            </div>
+            <CardInPosition x={1} y={1} deck={myArmy} />
+            <CardInPosition x={1} y={2} deck={myArmy} />
+            <CardInPosition x={1} y={3} deck={myArmy} />
+            <CardInPosition x={1} y={4} deck={myArmy} />
+            <CardInPosition x={1} y={5} deck={myArmy} />
           </BattlefieldRow>
         </BattlefieldCards>
-        <Commander {...commander} deploy />
+        <Commander {...myCommander} deploy />
       </BattlefieldSide>
     </BattlefieldWrapper>
   )

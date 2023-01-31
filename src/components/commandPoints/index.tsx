@@ -1,4 +1,5 @@
 import { Coin } from '../icons'
+
 import { CommandPointsWrapper } from './styles'
 
 type CommandPointsProps = {

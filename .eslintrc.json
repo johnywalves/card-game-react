@@ -49,9 +49,9 @@
                     ],
                     [
                         "parent",
-                        "sibling",
                         "index"
-                    ]
+                    ],
+                    "sibling"
                 ],
                 "alphabetize": {
                     "order": "asc",

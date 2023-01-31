@@ -3,6 +3,7 @@ import { useIntl } from 'react-intl'
 
 import CardProps, { CardState, CardType } from '../../types/CardProps'
 import { Sword, Arrow, Shield, Spell, Artefact, Coin } from '../icons'
+
 import {
   CardWrapper,
   CardValues,

@@ -1,6 +1,7 @@
 import { CardState } from '../../types/CardProps'
 import HandProps from '../../types/HandProps'
 import Card from '../card'
+
 import { HandWrapper, HandCardHolder } from './styles'
 
 const Hand = ({ listCards }: HandProps) => {

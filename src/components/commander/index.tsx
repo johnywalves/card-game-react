@@ -2,6 +2,7 @@ import { useIntl } from 'react-intl'
 
 import CommanderProps from '../../types/CommanderProps'
 import { Life, Shield } from '../icons'
+
 import {
   CommanderWrapper,
   CommanderValues,
