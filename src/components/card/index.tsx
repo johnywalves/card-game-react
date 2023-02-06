@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { MouseEventHandler, useMemo } from 'react'
 import { useIntl } from 'react-intl'
 
 import CardProps, { CardState, CardType } from '../../types/CardProps'
@@ -16,6 +16,10 @@ import {
   CardDescription
 } from './styles'
 
+type CardComponentProps = CardProps & {
+  deployCard?: MouseEventHandler<HTMLElement>
+}
+
 const Card = ({
   type,
   name,
@@ -24,8 +28,9 @@ const Card = ({
   attack,
   defense,
   reach,
-  state
-}: CardProps) => {
+  state,
+  deployCard
+}: CardComponentProps) => {
   const intl = useIntl()
 
   const nameIntl = intl.formatMessage({
@@ -50,7 +55,7 @@ const Card = ({
   }
 
   return (
-    <CardWrapper deploy={deploy}>
+    <CardWrapper deploy={deploy} onClick={deployCard}>
       <CardValues>
         {!deploy && (
           <CardLevel aria-label="level">

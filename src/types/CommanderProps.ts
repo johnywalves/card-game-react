@@ -1,4 +1,5 @@
 type CommanderProps = {
+  id: string
   initialHitPoints: number
   defense: number
   name: string

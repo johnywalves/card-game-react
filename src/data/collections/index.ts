@@ -3,6 +3,7 @@ import CardProps, { CardType } from '../../types/CardProps'
 import EmpireUrdin from './EmpireUrdin'
 
 const NoOne: CardProps = {
+  id: '000001',
   type: CardType.Creature,
   level: 0,
   name: '',

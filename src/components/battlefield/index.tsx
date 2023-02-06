@@ -40,18 +40,18 @@ const Battlefield = ({
       <BattlefieldSide>
         <BattlefieldCards>
           <BattlefieldRow top>
-            <CardInPosition x={0} y={1} deck={myArmy} />
-            <CardInPosition x={0} y={2} deck={myArmy} />
-            <CardInPosition x={0} y={3} deck={myArmy} />
-            <CardInPosition x={0} y={4} deck={myArmy} />
-            <CardInPosition x={0} y={5} deck={myArmy} />
+            <CardInPosition x={0} y={1} deck={myArmy} ownField />
+            <CardInPosition x={0} y={2} deck={myArmy} ownField />
+            <CardInPosition x={0} y={3} deck={myArmy} ownField />
+            <CardInPosition x={0} y={4} deck={myArmy} ownField />
+            <CardInPosition x={0} y={5} deck={myArmy} ownField />
           </BattlefieldRow>
           <BattlefieldRow>
-            <CardInPosition x={1} y={1} deck={myArmy} />
-            <CardInPosition x={1} y={2} deck={myArmy} />
-            <CardInPosition x={1} y={3} deck={myArmy} />
-            <CardInPosition x={1} y={4} deck={myArmy} />
-            <CardInPosition x={1} y={5} deck={myArmy} />
+            <CardInPosition x={1} y={1} deck={myArmy} ownField />
+            <CardInPosition x={1} y={2} deck={myArmy} ownField />
+            <CardInPosition x={1} y={3} deck={myArmy} ownField />
+            <CardInPosition x={1} y={4} deck={myArmy} ownField />
+            <CardInPosition x={1} y={5} deck={myArmy} ownField />
           </BattlefieldRow>
         </BattlefieldCards>
         <Commander {...myCommander} deploy />

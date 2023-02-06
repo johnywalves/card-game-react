@@ -20,6 +20,7 @@ export enum CardReach {
 }
 
 type CardProps = {
+  id: string
   type: CardType
   level: number
   name: string
